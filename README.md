@@ -1,2 +1,0 @@
-# joutrix-tmp
-Temp Website
