@@ -1,13 +1,7 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Joutrix</title>
-  <meta name="description" content="Contact Joutrix to discuss security improvements." />
+<!doctype html> name="description" content="Contact JOUTRIX to discuss security improvements." />
   <meta name="theme-color" content="#070A0F" />
-  <link rel="stylesheet" href="/assets/css/styles.css">
-  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body>
   <header class="nav">
@@ -16,12 +10,13 @@
         <span class="dot" aria-hidden="true"></span>
         <span>JOUTRIX</span>
       </a>
+
       <nav class="nav-links" aria-label="Primary">
         <a href="/">Home</a>
         <a href="/services/">Services</a>
         <a href="/certifications/">Certifications</a>
         <a href="/about/">About</a>
-        <a class="active" href="/contact/">Contact</a>
+        <a class="active" href="/contact/" aria-current="page">Contact</a>
       </nav>
     </div>
   </header>
@@ -30,32 +25,47 @@
     <div class="container">
       <span class="kicker">Contact</span>
       <h1 class="reveal">Let’s discuss your security goals</h1>
-      <p class="reveal">Email is best for first contact. If you want a working web form, I can wire it to a provider.</p>
+      <p class="reveal">
+        Email is fastest for first contact. Use the form below to draft a message — it will open your email client with everything filled in.
+      </p>
 
       <div class="card reveal">
         <p><strong>Email:</strong> <a href="mailto:connect@joutrix.com">connect@joutrix.com</a></p>
-        <p class="small">You can add a booking link here later if you want.</p>
+        <p class="small">If you prefer scheduling, you can add a booking link here later.</p>
       </div>
 
       <div class="card reveal" style="margin-top:1rem;">
         <h2>Message</h2>
 
-        <form id="contactForm">
+        <form id="contactForm" novalidate>
+          <!-- Honeypot (hidden field for basic spam resistance) -->
+          <div style="position:absolute; left:-9999px; width:1px; height:1px; overflow:hidden;" aria-hidden="true">
+            <label for="company">Company</label>
+            <input id="company" name="company" tabindex="-1" autocomplete="off" />
+          </div>
+
           <label for="name">Name</label>
-          <input id="name" name="name" autocomplete="name" />
+          <input id="name" name="name" autocomplete="name" required minlength="2" maxlength="80" />
 
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" />
+          <input id="email" name="email" type="email" autocomplete="email" required />
 
           <label for="msg">Message</label>
-          <textarea id="msg" name="msg" placeholder="Briefly describe what you want to improve."></textarea>
+          <textarea
+            id="msg"
+            name="msg"
+            placeholder="Briefly describe what you want to improve."
+            required
+            minlength="10"
+            maxlength="2000"
+          ></textarea>
 
           <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap;">
-            <button class="btn" type="submit">Send message →</button>
+            <button class="btn" type="submit">Open email draft →</button>
             <a class="btn secondary" href="mailto:connect@joutrix.com?subject=Joutrix%20Enquiry">Open email client</a>
           </div>
 
-          <p class="small" id="formNote" style="margin-top:1rem;"></p>
+          <p class="small" id="formNote" style="margin-top:1rem;" aria-live="polite"></p>
         </form>
       </div>
     </div>
@@ -69,12 +79,59 @@
 
   <script src="/assets/js/main.js" defer></script>
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-    document.getElementById("contactForm").addEventListener("submit", (e) => {
-      e.preventDefault();
-      document.getElementById("formNote").textContent =
-        "This is a static site. Choose a form provider (Formspree / Cloudflare Worker / etc.) and I’ll connect it properly.";
-    });
+    // Year
+    const y = document.getElementById("y");
+    if (y) y.textContent = new Date().getFullYear();
+
+    // Static form: open a prefilled email draft
+    const form = document.getElementById("contactForm");
+    const note = document.getElementById("formNote");
+
+    function encode(s) {
+      return encodeURIComponent((s || "").trim());
+    }
+
+    if (form) {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // Honeypot check
+        const hp = document.getElementById("company");
+        if (hp && hp.value) {
+          if (note) note.textContent = "Thanks — your message is being processed.";
+          return;
+        }
+
+        const name = document.getElementById("name")?.value || "";
+        const email = document.getElementById("email")?.value || "";
+        const msg = document.getElementById("msg")?.value || "";
+
+        // Basic validation
+        if (!name.trim() || !email.trim() || !msg.trim()) {
+          if (note) note.textContent = "Please complete name, email, and message.";
+          return;
+        }
+
+        const subject = `Joutrix Enquiry — ${name}`;
+        const body =
+          `Name: ${name}\n` +
+          `Email: ${email}\n\n` +
+          `Message:\n${msg}\n`;
+
+        const mailto = `mailto:connect@joutrix.com?subject=${encode(subject)}&body=${encode(body)}`;
+
+        // Open the draft
+        window.location.href = mailto;
+
+        if (note) note.textContent = "Opening your email client with a pre-filled draft…";
+      });
+    }
   </script>
 </body>
 </html>
+``
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — JOUTRIX</title>
