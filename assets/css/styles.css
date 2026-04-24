@@ -113,6 +113,14 @@ strong { color: var(--text); }
   background: rgba(57,255,182,.06);
 }
 
+/* Keyboard focus visibility */
+.nav-links a:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
 /* HERO */
 .hero { padding: clamp(2.5rem, 7vw, 5.5rem) 0; }
 .hero-grid {
@@ -211,13 +219,8 @@ input:focus, textarea:focus { outline: 2px solid rgba(57,255,182,.35); outline-o
 
 /* REVEAL (JS-gated so content is visible without JS) */
 .reveal { opacity: 1; transform: none; }
-
 .js .reveal { opacity: 0; transform: translateY(8px); }
-.js .reveal.on {
-  opacity: 1;
-  transform: none;
-  transition: opacity .35s ease, transform .35s ease;
-}
+.js .reveal.on { opacity: 1; transform: none; transition: opacity .35s ease, transform .35s ease; }
 
 /* FOOTER */
 footer {
@@ -235,3 +238,25 @@ footer {
   text-align: center;
 }
 .center h1 { margin-bottom: .3rem; }
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Ensure content is not hidden by reveal system */
+  .js .reveal,
+  .js .reveal.on {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Avoid motion on hover */
+  .btn:hover,
+  .card:hover {
+    transform: none !important;
+  }
+}
