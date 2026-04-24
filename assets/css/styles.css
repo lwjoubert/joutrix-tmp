@@ -20,6 +20,14 @@
   --max: 1120px;
 }
 
+@font-face {
+  font-family: "Eastone";
+  src: url("/assets/fonts/eastone.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 *{ box-sizing:border-box; }
 html{ color-scheme: dark; }
 body{
