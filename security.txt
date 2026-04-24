@@ -1,1 +1,4 @@
-
+Contact: mailto:connect@joutrix.com
+Preferred-Languages: en
+Policy: https://www.joutrix.com/
+Expires: 2027-01-01T00:00:00Z
