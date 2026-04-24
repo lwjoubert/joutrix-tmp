@@ -1,45 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact — Joutrix</title>
-  <meta name="description" content="Contact Joutrix to discuss security improvements." />
-  <meta name="theme-color" content="#070A0F" />
-  /assets/css/styles.css
-</head>
-<body>
-  <header class="nav">
-    <div class="container nav-inner">
-      /<span class="dot" aria-hidden="true"></span><span>JOUTRIX</span></a>
-      <nav class="nav-links" aria-label="Primary">
-        /Home</a>
-        /services/Services</a>
-        /certifications/Certifications</a>
-        /about/About</a>
-        /contact/Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="section">
-    <div class="container">
-      <span class="kicker">Contact</span>
-      <h1 class="reveal">Let’s discuss your security goals</h1>
-      <p class="reveal">Use the form below or email directly. Replace the email with your real address.</p>
+<!doctype html>veal">
+        Email is best for first contact. If you want a working web form, pick a form provider and I’ll wire it up.
+      </p>
 
       <div class="card reveal">
-        <p><strong>Email:</strong> connect@joutrix.comconnect@joutrix.com</a></p>
-        <p class="small">Tip: If you prefer, add a calendar link here later.</p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:connect@joutrix.com">connect@joutrix.com</a>
+        </p>
+        <p class="small">Tip: add a calendar link later if you want booking.</p>
       </div>
 
       <div class="card reveal" style="margin-top:1rem;">
         <h2>Message</h2>
 
-        <!-- NOTE: This form does not submit anywhere by default (static site).
-             If you want a working form, tell me your preferred method:
-             Cloudflare Forms, Formspree, Netlify Forms, or mailto fallback. -->
-        <form onsubmit="return false;">
+        <!-- Static demo form (does not submit anywhere yet) -->
+        <form id="contactForm">
           <label for="name">Name</label>
           <input id="name" name="name" autocomplete="name" />
 
@@ -47,13 +22,14 @@
           <input id="email" name="email" type="email" autocomplete="email" />
 
           <label for="msg">Message</label>
-          <textarea id="msg" name="msg" placeholder="Briefly describe your environment and what you want to improve."></textarea>
+          <textarea id="msg" name="msg" placeholder="Briefly describe what you want to improve."></textarea>
 
-          <div style="margin-top:1rem;">
-            <button class="btn" type="button" onclick="alert('Static site form: choose a form provider and I will wire it up.')">
-              Send message →
-            </button>
+          <div style="margin-top:1rem; display:flex; gap:.75rem; flex-wrap:wrap;">
+            <button class="btn" type="submit">Send message →</button>
+            <a class="btn secondary" href="mailto:connect@joutrix.com?subject=Joutrix%20Enquiry">Open email client</a>
           </div>
+
+          <p class="small" id="formNote" style="margin-top:1rem;"></p>
         </form>
       </div>
     </div>
@@ -65,7 +41,54 @@
     </div>
   </footer>
 
-  /assets/js/main.jsscript>
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="/assets/js/main.js"></script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Keep this form safe on a static site: show a helpful message instead of failing silently.
+    document.getElementById("contactForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      document.getElementById("formNote").textContent =
+        "This is a static site. Choose a form provider (Formspree / Cloudflare Worker / etc.) and I’ll connect this form properly.";
+    });
+  </script>
 </body>
 </html>
+``
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Joutrix</title>
+  <meta name="description" content="Contact Joutrix to discuss security improvements." />
+  <meta name="theme-color" content="#070A0F" />
+
+  <!-- ✅ Correct stylesheet link -->
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+
+  <!-- Optional: staging no-index -->
+  <!-- <meta name="robots" content="noindex, nofollow"> -->
+</head>
+
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/">
+        <span class="dot" aria-hidden="true"></span>
+        <span>JOUTRIX</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/certifications/">Certifications</a>
+        <a href="/about/">About</a>
+        <a class="active" href="/contact/">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <span class="kicker">Contact</span>
+      <h1 class="reveal">Let’s discuss your security goals</h1>
