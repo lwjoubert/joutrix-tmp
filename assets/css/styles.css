@@ -172,6 +172,13 @@ a:focus-visible {
   background: rgba(255,255,255,.03);
   box-shadow: none;
 }
+button.btn {
+  font: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+button.btn::-moz-focus-inner { border: 0; padding: 0; }
 
 /* GRID + CARDS */
 .grid {
