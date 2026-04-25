@@ -3,6 +3,15 @@
    Modern, responsive, no framework
    ========================= */
 
+/* Custom font: Eastone */
+@font-face {
+  font-family: "Eastone";
+  src: url("./eastone.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root{
   /* ---- Replace these with your exact Joutrix palette if needed ---- */
   --bg-0: #05070b;
