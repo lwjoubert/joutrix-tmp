@@ -1,5 +1,5 @@
 {
-  "image/png"  "name": "Joutrix",
+  "image/png"  "name": "JOUTRIX",
     },
     {
       "src": "/assets/favicon/android-chrome-512x512.png",
@@ -12,7 +12,7 @@
   "display": "standalone"
 }
 ``
-  "short_name": "Joutrix",
+  "short_name": "JOUTRIX",
   "icons": [
     {
       "src": "/assets/favicon/android-chrome-192x192.png",
