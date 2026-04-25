@@ -32,11 +32,11 @@
   --font-body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --font-menu: "Eastone", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 
-  /* ===== Subtle Teal Glow System ===== */
-  --glow: 0 0 0 rgba(96,200,176,0);
-  --glow-soft: 0 0 18px rgba(96,200,176,.18);
-  --glow-med: 0 0 26px rgba(96,200,176,.26);
-  --glow-strong: 0 0 34px rgba(96,200,176,.32);
+/* ===== Enhanced Cyber Glow (Option 2) ===== */
+--glow:        0 0 0 rgba(96,200,176,0);
+--glow-soft:   0 0 22px rgba(96,200,176,.24);
+--glow-med:    0 0 32px rgba(96,200,176,.34);
+--glow-strong: 0 0 44px rgba(96,200,176,.46);
 }
 
 * { box-sizing: border-box; }
