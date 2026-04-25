@@ -6,16 +6,14 @@
 
 'use strict';
 
-// Utility: debounce for performance
 const debounce = (fn, delay = 150) => {
   let timeout;
   return (...args) => {
     clearTimeout(timeout);
-    timeout = setTimeout(() => fn.apply(this, args), delay);
+    timeout = setTimeout(() => fn.apply(null, args), delay);
   };
 };
 
-// Utility: announce to screen readers
 const announce = (message) => {
   let liveRegion = document.getElementById('aria-live-region');
   if (!liveRegion) {
@@ -30,7 +28,6 @@ const announce = (message) => {
   setTimeout(() => { liveRegion.textContent = message; }, 100);
 };
 
-// Main initialization
 document.addEventListener('DOMContentLoaded', () => {
   try {
     initMobileNav();
