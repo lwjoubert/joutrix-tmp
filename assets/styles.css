@@ -277,12 +277,12 @@ header{
   display: none !important;
 }
 .mobile-panel a{
-  display:block;
+  display:flex;
+  align-items:center;
   padding: 12px 8px;
   border-radius: 12px;
   color: var(--muted);
   min-height: 44px;
-  align-items: center;
 }
 .mobile-panel a:hover{
   background: rgba(255,255,255,.04);
