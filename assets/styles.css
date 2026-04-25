@@ -70,7 +70,7 @@ img{ max-width:100%; display:block; }
 /* ======= Skip Link (Accessibility) ======= */
 .skip-link {
   position: absolute;
-  top: -40px;
+  top: -100px;
   left: 0;
   background: var(--accent);
   color: var(--bg-0);
@@ -79,9 +79,22 @@ img{ max-width:100%; display:block; }
   font-weight: 600;
   border-radius: 0 0 12px 0;
   transition: top 0.2s ease;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
 .skip-link:focus {
   top: 0;
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  overflow: visible;
+  width: auto;
+  white-space: normal;
 }
 
 /* ======= Subtle cyber grid background layer ======= */
