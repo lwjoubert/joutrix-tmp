@@ -72,8 +72,8 @@ h1, h2, h3,
 .brand span,
 .section-title h2,
 .pagehead h1 {
-  font-family: "Eastone", var(--font);
-  letter-spacing: 0.3px;
+  font-family: var(--font);
+  letter-spacing: normal;
 }
 
 /* ======= Skip Link (Accessibility) ======= */
