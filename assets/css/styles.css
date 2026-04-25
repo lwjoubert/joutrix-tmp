@@ -106,9 +106,12 @@ strong { color: var(--text); }
   text-transform: uppercase;
 }
 .brand .dot {
-  width: .55rem; height: .55rem; border-radius: 50%;
+  width: .55rem; height: .55rem; 
+  border-radius: 50%;
   background: var(--accent);
-  box-shadow: 0 0 18px rgba(96,200,176,.40), 0 0 34px rgba(96,200,176,.18);
+  box-shadow: 
+    0 0 26px rgba(96,200,176,.55), 
+    0 0 48px rgba(96,200,176,.30);
 }
 .nav-links {
   display: flex; gap: .8rem; align-items: center; flex-wrap: wrap;
@@ -199,10 +202,9 @@ a:focus-visible {
 }
 .btn:hover {
   transform: translateY(-1px);
-  border-color: rgba(96,200,176,.75);
-  filter: brightness(1.05);
+  border-color: rgba(96,200,176,.85);
+  filter: brightness(1.08);
   box-shadow: 0 18px 50px rgba(0,0,0,.35), var(--glow-med);
-  text-decoration: none;
 }
 .btn:active {
   transform: translateY(0);
@@ -253,8 +255,10 @@ button.btn::-moz-focus-inner { border: 0; padding: 0; }
 }
 .card:hover {
   transform: translateY(-2px);
-  border-color: rgba(96,200,176,.22);
-  box-shadow: var(--glow-soft);
+  border-color: rgba(96,200,176,.30);
+  box-shadow: 
+    var(--shadow);
+    var(--glow-soft);
 }
 .card ul { margin: .7rem 0 0; padding-left: 1.15rem; color: var(--muted); }
 .card li { margin: .25rem 0; }
