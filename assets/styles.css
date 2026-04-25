@@ -201,6 +201,26 @@ header{
   border: 1px solid rgba(24, 224, 208, 0.3);
 }
 
+/* =========================
+   Eastone usage: MENU + FOOTER ONLY
+   ========================= */
+
+/* Top nav + mobile nav */
+.navlinks a,
+.mobile-panel a,
+.nav-cta .btn,
+.brand span {
+  font-family: "Eastone", var(--font);
+  letter-spacing: 0.4px;
+}
+
+/* Footer: brand + links */
+footer .brand span,
+footer a {
+  font-family: "Eastone", var(--font);
+  letter-spacing: 0.35px;
+}
+
 .nav-cta{
   display:flex;
   align-items:center;
