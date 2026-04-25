@@ -1,1 +1,149 @@
 <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Cybersecurity and Microsoft Security services: identity hardening, M365 baselines, Defender, Sentinel, incident response." />
+  <title>Services | Joutrix</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="index.html"><span class="brand-badge"></span><span>JOUTRIX</span></a>
+        <nav class="navlinks" aria-label="Primary">
+          <a data-nav href="index.html">Home</a>
+          <a data-nav href="services.html">Services</a>
+          <a data-nav href="about.html">About</a>
+          <a data-nav href="certifications.html">Certifications</a>
+          <a data-nav href="contact.html">Contact</a>
+        </nav>
+        <div class="nav-cta">
+          <a class="btn" href="about.html">Capabilities</a>
+          <a class="btn btn-primary" href="contact.html">Book a consult</a>
+        </div>
+        <button class="burger" data-burger aria-label="Open menu">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/></svg>
+        </button>
+      </div>
+      <div class="mobile-panel" data-mobile-panel>
+        <a data-nav href="index.html">Home</a>
+        <a data-nav href="services.html">Services</a>
+        <a data-nav href="about.html">About</a>
+        <a data-nav href="certifications.html">Certifications</a>
+        <a data-nav href="contact.html">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="pagehead">
+      <div class="pill glow"><span class="dot"></span> Services • Microsoft-first security delivery</div>
+      <h1>Services</h1>
+      <p>
+        Designed for organizations running Microsoft identity, endpoints, and cloud services.
+        Each service includes clear deliverables and implementation-ready recommendations.
+      </p>
+    </div>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <h2>Core Microsoft Security</h2>
+          <p>Identity, endpoint, cloud governance, and monitoring aligned to practical risk reduction.</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card glow">
+          <h3>Active Directory Security Hardening</h3>
+          <p>Tiering, privileged groups cleanup, GPO controls, legacy protocol reduction, attack path mitigation.</p>
+          <div class="tags">
+            <span class="tag">AD</span><span class="tag">Privileged access</span><span class="tag">Hardening</span>
+          </div>
+        </div>
+
+        <div class="card glow">
+          <h3>Entra ID / Conditional Access Design</h3>
+          <p>Baseline CA policies, MFA strategy, device compliance flows, admin protections, and session controls.</p>
+          <div class="tags">
+            <span class="tag">Entra ID</span><span class="tag">CA</span><span class="tag">Identity</span>
+          </div>
+        </div>
+
+        <div class="card glow">
+          <h3>M365 Security Baseline Implementation</h3>
+          <p>Secure defaults, mailbox protections, anti-phishing, safe links/attachments, and configuration validation.</p>
+          <div class="tags">
+            <span class="tag">M365</span><span class="tag">Email Security</span><span class="tag">Baseline</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div>
+          <h2>Detection, Response & Operations</h2>
+          <p>Improve visibility, response speed, and operational control across identity and endpoints.</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card glow">
+          <h3>Defender for Endpoint / XDR Tuning</h3>
+          <p>ASR rules, exclusions review, alert reduction, response workflows, and containment readiness.</p>
+          <div class="tags"><span class="tag">Defender</span><span class="tag">XDR</span><span class="tag">ASR</span></div>
+        </div>
+
+        <div class="card glow">
+          <h3>SIEM / Sentinel Strategy</h3>
+          <p>Use-case mapping, ingestion priorities, alert logic, and operational playbooks aligned to your environment.</p>
+          <div class="tags"><span class="tag">Sentinel</span><span class="tag">SIEM</span><span class="tag">SOAR</span></div>
+        </div>
+
+        <div class="card glow">
+          <h3>Incident Response (Retainer / On-demand)</h3>
+          <p>Triage, containment, evidence capture guidance, and post-incident uplift recommendations.</p>
+          <div class="tags"><span class="tag">IR</span><span class="tag">Forensics-ready</span><span class="tag">Runbooks</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta glow">
+      <h2>Need a tailored service package?</h2>
+      <p>Tell me what your environment looks like (on-prem, hybrid, cloud) and your top concerns — I’ll propose a clean scope and timeline.</p>
+      <div class="row">
+        <a class="btn btn-primary" href="contact.html">Request a scope</a>
+        <a class="btn" href="certifications.html">View certifications →</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom:10px;">
+            <span class="brand-badge"></span><span>JOUTRIX</span>
+          </div>
+          <div>Cybersecurity • Microsoft Security • Services</div>
+          <div style="margin-top:10px; font-size:13px;">© <span id="y"></span> Joutrix.</div>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="certifications.html">Certifications</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  <script src="assets/script.js"></script>
+</body>
+</html>
