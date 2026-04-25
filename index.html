@@ -4,10 +4,41 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Joutrix Cybersecurity & Microsoft Security Services – hardening, detection, response, and advisory." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://tmp.joutrix.com/" />
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Joutrix | Microsoft Security Consulting" />
+  <meta property="og:description" content="Reduce risk with Entra ID hardening, Defender tuning, and incident response for Microsoft environments." />
+  <meta property="og:url" content="https://tmp.joutrix.com/" />
+  <meta property="og:image" content="https://tmp.joutrix.com/assets/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/favicon.ico" />
+  
   <title>Joutrix | Cybersecurity & Microsoft Security Services</title>
   <link rel="stylesheet" href="assets/styles.css" />
+  
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Joutrix",
+    "description": "Cybersecurity & Microsoft Security services: Entra ID hardening, Defender tuning, incident response.",
+    "url": "https://tmp.joutrix.com",
+    "priceRange": "$$",
+    "areaServed": "Worldwide"
+  }
+  </script>
 </head>
 <body>
+  <!-- Accessibility: Skip link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <div class="bg-grid" aria-hidden="true"></div>
 
   <header>
@@ -37,14 +68,14 @@
           </a>
         </div>
 
-        <button class="burger" data-burger aria-label="Open menu">
+        <button class="burger" data-burger aria-label="Open menu" aria-expanded="false" aria-controls="mobile-panel">
           <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
             <path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/>
           </svg>
         </button>
       </div>
 
-      <div class="mobile-panel" data-mobile-panel>
+      <div class="mobile-panel" data-mobile-panel id="mobile-panel" hidden>
         <a data-nav href="index.html">Home</a>
         <a data-nav href="services.html">Services</a>
         <a data-nav href="about.html">About</a>
@@ -54,7 +85,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <section class="hero">
       <div class="container">
         <div class="pill glow">
@@ -99,6 +130,15 @@
                 <strong>Security outcomes</strong>
                 <span>Reduced exposure, better detection</span>
               </div>
+            </div>
+            
+            <!-- Trust signals -->
+            <div class="trust-bar" style="margin-top:2rem; opacity:0.9; font-size:0.875rem; color: var(--muted);">
+              <span>🔒 Microsoft Security Focus</span>
+              <span style="margin:0 1rem;">•</span>
+              <span>✅ Remote Delivery</span>
+              <span style="margin:0 1rem;">•</span>
+              <span>📊 Measurable Outcomes</span>
             </div>
           </div>
 
@@ -275,6 +315,6 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
-  <script src="assets/script.js"></script>
+  <script src="assets/script.js" defer></script>
 </body>
 </html>
