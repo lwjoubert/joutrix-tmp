@@ -3,15 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#070A0F" />
+  <meta name="theme-color" content="#0C1110" />
+
   <link rel="manifest" href="/site.webmanifest">
-  <title>Joutrix — Cybersecurity for Microsoft Identity & Hybrid Infrastructure</title>
+
+  <title>Joutrix — Cybersecurity for Microsoft Identity &amp; Hybrid Infrastructure</title>
   <meta name="description" content="Practical cybersecurity focused on Microsoft identity, Active Directory hardening, and hybrid defense." />
 
   <!-- Optional (use on tmp only): prevent indexing -->
   <!-- <meta name="robots" content="noindex, nofollow"> -->
 
-  <!-- Favicon (only if you created these files) -->
+  <!-- Favicon -->
   <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
@@ -34,7 +36,7 @@
       </a>
 
       <nav class="nav-links" aria-label="Primary">
-        <a class="active" href="/">Home</a>
+        <a class="active" href="/" aria-current="page">Home</a>
         <a href="/services/">Services</a>
         <a href="/certifications/">Certifications</a>
         <a href="/about/">About</a>
@@ -58,9 +60,17 @@
             and aligned with operational reality.
           </p>
 
-          <div class="reveal" style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1.2rem;">
+          <div class="reveal hero-cta">
             <a class="btn" href="/contact/">Book a technical call →</a>
             <a class="btn secondary" href="/services/">View services</a>
+          </div>
+
+          <!-- Jump links (Home flow) -->
+          <div class="jump reveal" aria-label="Jump links">
+            <a href="#services">Services</a>
+            <a href="#system">System</a>
+            <a href="#process">Process</a>
+            <a href="#contact">Contact</a>
           </div>
 
           <div class="chips reveal">
@@ -89,8 +99,8 @@
       </div>
     </section>
 
-    <!-- Services -->
-    <section class="section">
+    <!-- SERVICES (Anchor target) -->
+    <section id="services" class="section">
       <div class="container">
         <h2 class="reveal">Services</h2>
         <p class="reveal">Focused services with outcomes you can implement.</p>
@@ -129,8 +139,70 @@
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section class="section">
+    <!-- SYSTEM / STACK (Anchor target) -->
+    <section id="system" class="section">
+      <div class="container">
+        <h2 class="reveal">Delivery System</h2>
+        <p class="reveal">
+          A structured approach that connects identity security, hybrid controls, and operational reality —
+          so improvements are measurable and implementable.
+        </p>
+
+        <div class="stack reveal">
+          <div class="stack-item">
+            <div class="stack-num">01</div>
+            <div class="stack-body">
+              <h3>Identity Baseline</h3>
+              <p>Establish what is true: roles, trust paths, privileged access, and configuration drift.</p>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-num">02</div>
+            <div class="stack-body">
+              <h3>Exposure &amp; Attack Paths</h3>
+              <p>Identify the most likely routes to impact — focused on what matters, not noise.</p>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-num">03</div>
+            <div class="stack-body">
+              <h3>Hardening Actions</h3>
+              <p>Prioritised changes mapped to operational impact and measurable risk reduction.</p>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-num">04</div>
+            <div class="stack-body">
+              <h3>Detection Alignment</h3>
+              <p>Ensure monitoring and response playbooks match the risks actually present.</p>
+            </div>
+          </div>
+
+          <div class="stack-item">
+            <div class="stack-num">05</div>
+            <div class="stack-body">
+              <h3>Recovery Readiness</h3>
+              <p>Validate recovery paths so identity compromise does not become prolonged outage.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card reveal" style="margin-top:1rem;">
+          <h2>Outcome: clarity and control</h2>
+          <p>
+            You get a clear, implementable roadmap — tied to identity risk, hybrid seams,
+            and the operational reality of your environment.
+          </p>
+          <a class="btn" href="/services/">Explore services →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS (Anchor target) -->
+    <section id="process" class="section">
       <div class="container">
         <h2 class="reveal">Engagement, simplified</h2>
 
@@ -154,7 +226,8 @@
           </div>
         </div>
 
-        <div class="card reveal" style="margin-top:1rem;">
+        <!-- CONTACT (Anchor target) -->
+        <div id="contact" class="card reveal" style="margin-top:1rem;">
           <h2>Ready to proceed?</h2>
           <p>Send a brief description of your environment and what you want to improve.</p>
           <a class="btn" href="/contact/">Contact Joutrix →</a>
@@ -163,7 +236,7 @@
     </section>
   </main>
 
-  <!-- FOOTER (simple, no duplicate nav) -->
+  <!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="small">
