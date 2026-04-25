@@ -63,6 +63,12 @@ img{ max-width:100%; display:block; }
   margin: 0 auto;
   padding: 0 20px;
 }
+/* Wider container (use only where needed, e.g., HERO) */
+.container-wide{
+  max-width: 1320px;   /* Feel free to try 1440px if you want it even wider */
+  margin: 0 auto;
+  padding: 0 20px;
+}
 
 /* =========================
    Accessibility
