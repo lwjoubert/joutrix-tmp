@@ -3,313 +3,281 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Joutrix Cybersecurity – hardening, detection, response, and advisory." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://tmp.joutrix.com/" />
-  
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Joutrix | Microsoft Security Consulting" />
-  <meta property="og:description" content="Reduce risk with Entra ID hardening, Defender tuning, and incident response for Microsoft environments." />
-  <meta property="og:url" content="https://tmp.joutrix.com/" />
-  <meta property="og:image" content="https://tmp.joutrix.com/assets/og-image.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  
-  <!-- Favicon & PWA -->
-  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/favicon.ico" />
-  
   <title>JOUTRIX | Cybersecurity Advisory Services</title>
+  
+  <!-- Meta Description (Dynamic based on section) -->
+  <meta name="description" content="Joutrix Cybersecurity – hardening, detection, response, and advisory." />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="assets/styles.css" />
   
-  <!-- Structured Data (Schema.org) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Joutrix",
-    "description": "Cybersecurity & Microsoft Security services: Entra ID hardening, Defender tuning, incident response.",
-    "url": "https://tmp.joutrix.com",
-    "priceRange": "$$",
-    "areaServed": "Worldwide"
-  }
-  </script>
+  <!-- Favicon & PWA -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/favicon.ico" />
+  
 </head>
 <body>
-  <!-- Accessibility: Skip link -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  
-  <div class="bg-grid" aria-hidden="true"></div>
 
-  <header>
-    <div class="container">
-      <div class="nav">
-        <!-- NEW CODE -->
-        <a class="brand" href="index.html" aria-label="Joutrix Home">
-          <img src="assets/favicon.ico" alt="" aria-hidden="true" class="brand-logo" />
-          <span>JOUTRIX</span>
-        </a>
 
-        <nav class="navlinks" aria-label="Primary">
-          <a data-nav href="index.html">Home</a>
-          <a data-nav href="services.html">Services</a>
-          <a data-nav href="about.html">About</a>
-          <a data-nav href="certifications.html">Certifications</a>
-          <a data-nav href="contact.html">Contact</a>
-        </nav>
+  <!-- ==================== HEADER (Shared) ==================== -->
+  <header id="main-header">
+	<div class="container">
+		<div class="nav">
+		<a class="brand" href="#home"><span class="brand-badge"></span><span>JOUTRIX</span></a>
+	
+		<nav class="navlinks" aria-label="Primary">
+			<a data-nav href="#home">Home</a>
+			<a data-nav href="#services">Services</a>
+			<a data-nav href="#about">About</a>
+			<a data-nav href="#certifications">Certifications</a>
+			<a data-nav href="#contact">Contact</a>
+		</nav>
+	
+		<!-- Fixed: Only "Book a consult" button -->
+		<div class="nav-cta">
+			<a class="btn btn-primary" href="#contact">Book a consult</a>
+		</div>
+	
+		<button class="burger" data-burger aria-label="Open menu">
+			<svg class="icon" viewBox="0 0 24 24"><path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/></svg>
+		</button>
+		</div>
+	
+		<div class="mobile-panel" data-mobile-panel id="mobile-panel">
+			<a data-nav href="#home">Home</a>
+			<a data-nav href="#services">Services</a>
+			<a data-nav href="#about">About</a>
+			<a data-nav href="#certifications">Certifications</a>
+			<a data-nav href="#contact">Contact</a>
+		</div>
+	</div>
+	</header>
 
-        <div class="nav-cta">
-          <a class="btn" href="services.html">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4zm0 3.2L6 8v4c0 3.8 2.4 7.1 6 7.8 3.6-.7 6-4 6-7.8V8l-6-2.8z"/></svg>
-            Capabilities
-          </a>
-          <a class="btn btn-primary" href="contact.html">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 8V7l-3 2-2-1-4 3-4-3-2 1-3-2v1l9 6 9-6zm0 3.5l-9 6-9-6V18c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2v-6.5z"/></svg>
-            Book a consult
-          </a>
-        </div>
 
-        <button class="burger" data-burger aria-label="Open menu" aria-expanded="false" aria-controls="mobile-panel">
-          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/>
-          </svg>
-        </button>
-      </div>
-
-      <div class="mobile-panel" data-mobile-panel id="mobile-panel" hidden>
-        <div class="brand" style="padding: 12px 8px; margin-bottom: 8px;">
-          <img src="assets/favicon.ico" alt="" class="brand-logo" />
-          <span>JOUTRIX</span>
-        </div>
-        <a data-nav href="index.html">Home</a>
-        <a data-nav href="services.html">Services</a>
-        <a data-nav href="about.html">About</a>
-        <a data-nav href="certifications.html">Certifications</a>
-        <a data-nav href="contact.html">Contact</a>
-      </div>
-    </div>
-  </header>
-
+  <!-- ==================== MAIN CONTENT (Continuous Flow) ==================== -->
   <main id="main-content">
-    <section class="hero">
-      <div class="container-wide">
-        <div class="pill glow">
-          <span class="dot" aria-hidden="true"></span>
-          Microsoft Security • Identity Hardening • Threat Detection • Incident Response
+    
+    <!-- HOME SECTION (Hero + KPIs) -->
+    <section id="home" class="hero-section" style="scroll-margin-top: 80px;">
+		<div class="container">
+			<div class="pill glow"><span class="dot"></span> Microsoft Security • Identity Hardening • Threat Detection</div>
+		
+			<div class="hero-grid">
+			<!-- Left Column -->
+			<div>
+				<h1>Cybersecurity & Microsoft Security services that actually reduce risk.</h1>
+				<p>From Entra ID and Active Directory hardening to modern detection and response, Joutrix helps organizations tighten identity controls, close configuration gaps, and improve real-world security outcomes.</p>
+		
+				<div class="hero-actions">
+				<a class="btn btn-primary" href="#services"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4zm0 3.2L6 8v4c0 3.8 2.4 7.1 6 7.8 3.6-.7 6-4 6-7.8V8l-6-2.8z"/></svg> Explore services</a>
+				<a class="btn" href="#contact"><svg class="icon" viewBox="0 0 24 24"><path d="M2 21l1-4 4-1 11-11 4 4-11 11-4 1-1 4H2zm6-6l2 2 10-10-2-2L8 15z"/></svg> Request an assessment</a>
+				<button class="btn" data-copy="connect@joutrix.com" type="button"><svg class="icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg> Copy email</button>
+				</div>
+		
+				<div class="kpi">
+				<!-- KPI Cards now use unified styles with glow effect -->
+				<div class="card glow"><strong>Microsoft-first</strong><span>Identity + endpoint + cloud controls</span></div>
+				<div class="card glow"><strong>Practical delivery</strong><span>Hardening + remediation + runbooks</span></div>
+				<div class="card glow"><strong>Security outcomes</strong><span>Reduced exposure, better detection</span></div>
+				</div>
+			</div>
+		
+			<!-- Right Column (Hero Card Side Panel) -->
+			<aside class="hero-card glow">
+				<div class="top">
+				<div class="badge"><span class="dot"></span>Security focus areas</div>
+				<div class="badge"><svg class="icon" viewBox="0 0 24 24"><path d="M12 17l-5 3 1.5-5.8L4 9.8l6-.4L12 4l2 5.4 6 .4-4.5 4.4L17 20z"/></svg>Modern standards</div>
+				</div>
+				<div class="content">
+				<div class="mini-list">
+					<div class="mini-item"><span class="dot"></span><div><b>Identity hardening</b><p>AD/Entra security posture, privileged access, conditional access design.</p></div></div>
+					<div class="mini-item"><span class="dot"></span><div><b>Microsoft Defender & XDR</b><p>Endpoint protections, attack surface reduction, tuning, and response workflows.</p></div></div>
+					<div class="mini-item"><span class="dot"></span><div><b>Detection & response</b><p>SIEM/SOAR strategy, incident readiness, threat hunting support.</p></div></div>
+				</div>
+				<div class="tags" aria-label="Tags">
+					<span class="tag">Entra ID</span><span class="tag">Active Directory</span><span class="tag">Defender</span><span class="tag">Sentinel</span><span class="tag">M365 Hardening</span>
+				</div>
+				</div>
+			</aside>
+			</div>
+		</div>
+		</section>
+
+    <!-- SERVICES SECTION (Standard Width) -->
+    <section id="services" class="page-section" style="scroll-margin-top: 80px;">
+      <div class="container">
+        <div class="pagehead">
+          <div class="pill glow"><span class="dot"></span> Services • Microsoft-first security delivery</div>
+          <h1>What We Offer</h1>
+          <p>Designed for organizations running Microsoft identity, endpoints, and cloud services. Each service includes clear deliverables and implementation-ready recommendations.</p>
         </div>
 
-        <div class="hero-grid">
-          <div>
-            <h1>Cybersecurity & Microsoft Security services that actually reduce risk.</h1>
-            <p>
-              From Entra ID and Active Directory hardening to modern detection and response,
-              Joutrix helps organizations tighten identity controls, close configuration gaps,
-              and improve real-world security outcomes.
-            </p>
+        <section class="grid-3">
+          <div class="card glow"><h3>Active Directory Security Hardening</h3><p>Tiering, privileged groups cleanup, GPO controls, legacy protocol reduction, attack path mitigation.</p><div class="tags"><span class="tag">AD</span><span class="tag">Privileged access</span><span class="tag">Hardening</span></div></div>
+          <div class="card glow"><h3>Entra ID / Conditional Access Design</h3><p>Baseline CA policies, MFA strategy, device compliance flows, admin protections, and session controls.</p><div class="tags"><span class="tag">Entra ID</span><span class="tag">CA</span><span class="tag">Identity</span></div></div>
+          <div class="card glow"><h3>M365 Security Baseline Implementation</h3><p>Secure defaults, mailbox protections, anti-phishing, safe links/attachments, and configuration validation.</p><div class="tags"><span class="tag">M365</span><span class="tag">Email Security</span><span class="tag">Baseline</span></div></div>
+        </section>
 
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="services.html">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.4 9.4-8 10-4.6-.6-8-5-8-10V6l8-4zm0 3.2L6 8v4c0 3.8 2.4 7.1 6 7.8 3.6-.7 6-4 6-7.8V8l-6-2.8z"/></svg>
-                Explore services
-              </a>
-              <a class="btn" href="contact.html">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 21l1-4 4-1 11-11 4 4-11 11-4 1-1 4H2zm6-6l2 2 10-10-2-2L8 15z"/></svg>
-                Request an assessment
-              </a>
-              <button class="btn" data-copy="connect@joutrix.com" type="button">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                Copy email
-              </button>
-            </div>
+        <section class="grid-3">
+          <div class="card glow"><h3>Defender for Endpoint / XDR Tuning</h3><p>ASR rules, exclusions review, alert reduction, response workflows, and containment readiness.</p><div class="tags"><span class="tag">Defender</span><span class="tag">XDR</span><span class="tag">ASR</span></div></div>
+          <div class="card glow"><h3>SIEM / Sentinel Strategy</h3><p>Use-case mapping, ingestion priorities, alert logic, and operational playbooks aligned to your environment.</p><div class="tags"><span class="tag">Sentinel</span><span class="tag">SIEM</span><span class="tag">SOAR</span></div></div>
+          <div class="card glow"><h3>Incident Response (Retainer / On-demand)</h3><p>Triage, containment, evidence capture guidance, and post-incident uplift recommendations.</p><div class="tags"><span class="tag">IR</span><span class="tag">Forensics-ready</span><span class="tag">Runbooks</span></div></div>
+        </section>
 
-            <div class="kpi">
-              <div class="card glow">
-                <strong>Microsoft-first</strong>
-                <span>Identity + endpoint + cloud controls</span>
-              </div>
-              <div class="card glow">
-                <strong>Practical delivery</strong>
-                <span>Hardening + remediation + runbooks</span>
-              </div>
-              <div class="card glow">
-                <strong>Security outcomes</strong>
-                <span>Reduced exposure, better detection</span>
-              </div>
-            </div>
-          
-</div>
-<aside class="hero-card glow">
-            <div class="top">
-              <div class="badge">
-                <span class="dot" aria-hidden="true"></span>
-                Security focus areas
-              </div>
-              <div class="badge">
-                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 17l-5 3 1.5-5.8L4 9.8l6-.4L12 4l2 5.4 6 .4-4.5 4.4L17 20z"/></svg>
-                Modern standards
-              </div>
-            </div>
-
-            <div class="content">
-              <div class="mini-list">
-                <div class="mini-item">
-                  <span class="dot" aria-hidden="true"></span>
-                  <div>
-                    <b>Identity hardening</b>
-                    <p>AD/Entra security posture, privileged access, conditional access design.</p>
-                  </div>
-                </div>
-                <div class="mini-item">
-                  <span class="dot" aria-hidden="true"></span>
-                  <div>
-                    <b>Microsoft Defender & XDR</b>
-                    <p>Endpoint protections, attack surface reduction, tuning, and response workflows.</p>
-                  </div>
-                </div>
-                <div class="mini-item">
-                  <span class="dot" aria-hidden="true"></span>
-                  <div>
-                    <b>Detection & response</b>
-                    <p>SIEM/SOAR strategy, incident readiness, threat hunting support.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="tags" aria-label="Tags">
-                <span class="tag">Entra ID</span>
-                <span class="tag">Active Directory</span>
-                <span class="tag">Defender</span>
-                <span class="tag">Sentinel</span>
-                <span class="tag">M365 Hardening</span>
-              </div>
-            </div>
-          </aside>
-        </div>
+        <section class="cta glow">
+          <h2>Need a tailored service package?</h2>
+          <p>Tell me what your environment looks like (on-prem, hybrid, cloud) and your top concerns — I'll propose a clean scope and timeline.</p>
+          <div class="row">
+            <a class="btn btn-primary" href="#contact">Request a scope</a>
+            <a class="btn" href="#certifications">View certifications →</a>
+          </div>
+        </section>
       </div>
     </section>
 
-    <section>
+    <!-- ABOUT SECTION (Standard Width) -->
+    <section id="about" class="page-section" style="scroll-margin-top: 80px;">
       <div class="container">
-        <div class="section-title">
-          <div>
-            <h2>Services built for Microsoft environments</h2>
-            <p>Clear deliverables, real remediation steps, and security improvements you can measure.</p>
-          </div>
-          <a class="btn" href="services.html">View all services →</a>
+        <div class="pagehead">
+          <div class="pill glow"><span class="dot"></span> About • Practical security engineering</div>
+          <h1>Who We Are</h1>
+          <p>Built on deep infrastructure experience and focused on modern cybersecurity — with a strong emphasis on Microsoft identity and hybrid environments.</p>
         </div>
 
-        <div class="grid-3">
-          <div class="card glow">
-            <h3>AD / Entra ID Security Assessment</h3>
-            <p>Privilege review, tiering, CA baselines, identity attack paths, and prioritized fixes.</p>
-            <div class="tags">
-              <span class="tag">Identity</span><span class="tag">PAM</span><span class="tag">Hardening</span>
-            </div>
-          </div>
+        <section class="grid-2">
+          <div class="card glow"><h3>Approach</h3><p>Security work should translate into measurable risk reduction. Joutrix prioritizes identity controls, hardening, and operational playbooks — not just reports.</p><div class="tags"><span class="tag">Evidence-based</span><span class="tag">Implementation-ready</span><span class="tag">Microsoft-first</span></div></div>
+          <div class="card glow"><h3>Focus areas</h3><p>Identity attack paths, AD/Entra hardening, Defender/XDR tuning, and response readiness — especially for hybrid Microsoft estates.</p><div class="tags"><span class="tag">AD</span><span class="tag">Entra ID</span><span class="tag">Defender</span><span class="tag">IR</span></div></div>
+        </section>
 
-          <div class="card glow">
-            <h3>M365 Security Hardening</h3>
-            <p>Secure defaults, Defender settings, email protection, device compliance, and governance.</p>
-            <div class="tags">
-              <span class="tag">Defender</span><span class="tag">M365</span><span class="tag">Baseline</span>
-            </div>
+        <section>
+          <div class="section-title">
+            <div><h2>What you get</h2><p>Outcomes designed to help your team operate securely day-to-day.</p></div>
           </div>
+          <div class="grid-3">
+            <div class="card glow"><h3>Prioritized remediation</h3><p>Fix lists mapped to impact and effort, with clear next steps.</p></div>
+            <div class="card glow"><h3>Operational playbooks</h3><p>Runbooks for triage, containment, and security operations workflows.</p></div>
+            <div class="card glow"><h3>Baseline + governance</h3><p>Microsoft-aligned controls and governance that hold up over time.</p></div>
+          </div>
+        </section>
 
-          <div class="card glow">
-            <h3>Incident Readiness & Response</h3>
-            <p>Runbooks, containment playbooks, triage support, and lessons learned improvements.</p>
-            <div class="tags">
-              <span class="tag">IR</span><span class="tag">Runbooks</span><span class="tag">SOC</span>
-            </div>
+        <section class="cta glow">
+          <h2>Let's make your Microsoft environment harder to break.</h2>
+          <p>Start with a scoped assessment or a hardening sprint — you'll get actionable outcomes fast.</p>
+          <div class="row">
+            <a class="btn btn-primary" href="#contact">Book a consult</a>
+            <a class="btn" href="#services">Services →</a>
           </div>
-        </div>
+        </section>
       </div>
     </section>
 
-    <section>
+    <!-- CERTIFICATIONS SECTION (Standard Width) -->
+    <section id="certifications" class="page-section" style="scroll-margin-top: 80px;">
       <div class="container">
-        <div class="grid-2">
-          <div class="card glow">
-            <div class="section-title">
-              <div>
-                <h2>How engagements run</h2>
-                <p>A clear, repeatable process designed to deliver value fast.</p>
-              </div>
-            </div>
-
-            <div class="timeline">
-              <div class="step">
-                <div class="num">1</div>
-                <div>
-                  <b>Scope & access</b>
-                  <span>Define goals, environments, and required visibility.</span>
-                </div>
-              </div>
-              <div class="step">
-                <div class="num">2</div>
-                <div>
-                  <b>Assess & validate</b>
-                  <span>Gather evidence, confirm exposure, map attack paths.</span>
-                </div>
-              </div>
-              <div class="step">
-                <div class="num">3</div>
-                <div>
-                  <b>Remediate</b>
-                  <span>Provide prioritized fixes with implementation-ready steps.</span>
-                </div>
-              </div>
-              <div class="step">
-                <div class="num">4</div>
-                <div>
-                  <b>Handover</b>
-                  <span>Runbooks, hardening baselines, and operational guidance.</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="cta glow">
-            <h2>Want a Microsoft security posture uplift in 2–4 weeks?</h2>
-            <p>
-              Get a scoped assessment with actionable remediation, mapped to identity, endpoint,
-              and cloud controls.
-            </p>
-            <div class="row">
-              <a class="btn btn-primary" href="contact.html">Book a consult</a>
-              <a class="btn" href="about.html">About Joutrix →</a>
-            </div>
-          </div>
+        <div class="pagehead">
+          <div class="pill glow"><span class="dot"></span> Certifications • Proof of capability</div>
+          <h1>Credentials</h1>
+          <p>A selection of certifications and learning milestones. Add/remove items as you like, and link verification where applicable.</p>
         </div>
+
+        <section>
+          <div class="section-title">
+            <div><h2>Cybersecurity</h2><p>Hands-on capability focused training and certifications.</p></div>
+          </div>
+          <div class="grid-3">
+            <div class="card glow"><h3>CPTS</h3><p>Certified Penetration Testing Specialist (verification link can be added).</p><div class="tags"><span class="tag">Hands-on</span><span class="tag">Offense</span><span class="tag">Verification</span></div></div>
+            <div class="card glow"><h3>Security Foundations</h3><p>Core security fundamentals and baseline knowledge for modern environments.</p><div class="tags"><span class="tag">Foundations</span><span class="tag">Blue Team</span></div></div>
+            <div class="card glow"><h3>Continuous Learning</h3><p>Ongoing labs, courses, and exercises aligned to real-world security work.</p><div class="tags"><span class="tag">Labs</span><span class="tag">Practice</span></div></div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title">
+            <div><h2>Microsoft / Cloud</h2><p>Identity, cloud, and platform security knowledge supporting Microsoft-first environments.</p></div>
+          </div>
+          <div class="grid-3">
+            <div class="card glow"><h3>Microsoft Security</h3><p>Identity protections, security tooling, and platform governance knowledge.</p><div class="tags"><span class="tag">M365</span><span class="tag">Entra ID</span><span class="tag">Defender</span></div></div>
+            <div class="card glow"><h3>Cloud & Edge</h3><p>Cloud security principles and practical implementation experience.</p><div class="tags"><span class="tag">Cloud</span><span class="tag">Zero Trust</span></div></div>
+            <div class="card glow"><h3>Operational Practice</h3><p>Incident readiness and security operations workflows.</p><div class="tags"><span class="tag">IR</span><span class="tag">SOC</span></div></div>
+          </div>
+        </section>
+
+<!--        <section class="cta glow">
+          <h2>Want this page to match your LinkedIn exactly?</h2>
+          <p>If you paste your "Licenses & certifications" list (or link them), I'll convert it into this layout with verification icons and clean grouping.</p>
+          <div class="row">
+            <a class="btn btn-primary" href="#contact">Contact</a>
+            <a class="btn" href="#services">Services →</a>
+          </div>
+        </section>
+      </div>
+    </section> -->
+
+    <!-- CONTACT SECTION (Standard Width) -->
+    <!-- CONTACT SECTION -->
+	<section id="contact" class="page-section" style="scroll-margin-top: 80px;">
+      <div class="container">
+        <div class="pagehead">
+          <div class="pill glow"><span class="dot"></span> Contact • Quick response</div>
+          <h1>Get in Touch</h1>
+          <p>Send a message and I'll get back to you with a suggested scope, timeline, and next steps.</p>
+        </div>
+
+        <section class="grid-2">
+          <div class="card glow">
+            <h3>Send a message</h3>
+            <form action="#" method="post">
+              <div class="field"><label for="name">Name</label><input id="name" name="name" placeholder="Your name" required /></div>
+              <div class="field"><label for="email">Email</label><input id="email" name="email" placeholder="you@company.com" type="email" required /></div>
+              <div class="field"><label for="topic">Service area</label><select id="topic" name="topic">
+                <option>Microsoft Identity (AD / Entra)</option>
+                <option>Active Directory Hardening</option>
+                <option>M365 hardening</option>
+                <option>Other</option>
+              </select></div>
+              <div class="field"><label for="msg">Message</label><textarea id="msg" name="msg" placeholder="Briefly describe your environment and what you need..."></textarea></div>
+              <button class="btn btn-primary" type="submit">Send</button>
+              <!-- <div style="color:var(--muted-2); font-size:12px;">Note: form action is placeholder. If you want, I'll wire it to your Cloudflare Worker endpoint.</div>-->
+            </form>
+          </div>
+          <div class="card glow">
+            <h3>Direct contact</h3>
+            <p style="margin-bottom:12px;">Prefer email? Use the address below.</p>
+            <!--<div class="mini-item"><span class="dot"></span><div><b>Email</b><p>connect@joutrix.com</p></div></div> -->
+            <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn" data-copy="connect@joutrix.com" type="button">Copy email</button>
+              <!-- <a class="btn" href="#services">View services →</a> -->
+            </div>
+            <div style="margin-top:16px; color:var(--muted); font-size:13px; line-height:1.6;">If you already have a preferred format (scope template, requirements list, assessment checklist), send it along — We can align deliverables to your internal standards.</div>
+          </div>
+        </section>
       </div>
     </section>
 
   </main>
 
-  <footer>
+  <!-- ==================== FOOTER (Shared) ==================== -->
+  <footer id="main-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="brand">
-            <img src="assets/favicon.ico" alt="" aria-hidden="true" class="brand-logo" />
-            <span>JOUTRIX</span>
-          </div>
-          <div style="margin-top:10px; font-size:13px;">© <span id="y"></span> JOUTRIX. All rights reserved.</div>
+          <div>JOUTRIX | Cybersecurity Advisory Services</div>
+          <div style="margin-top:10px; font-size:13px;">© <span id="y"></span> JOUTRIX</div>
         </div>
-
-        <div class="footer-links" aria-label="Footer">
-          <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="certifications.html">Certifications</a>
-          <a href="contact.html">Contact</a>
+        <div class="footer-links">
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#certifications">Certifications</a>
+          <a href="#contact">Contact</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-  <script src="assets/script.js" defer></script>
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  
+  <!-- Mobile Menu Toggle Logic (Ensure this matches your script.js) -->
+  <script src="assets/script.js"></script>
 </body>
 </html>
