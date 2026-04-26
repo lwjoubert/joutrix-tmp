@@ -154,8 +154,8 @@ header{
 }
 
 .nav{
-  display:grid;
-  grid-template-columns:auto 1fr auto;
+  display:flex;
+  justify-content:space-between;
   align-items:center;
   padding:14px 0;
 }
@@ -165,6 +165,21 @@ header{
   align-items:center;
   gap:12px;
   font-weight:700;
+}
+
+/* Space between brand and burger */
+.burger {
+  margin-left: auto; /* Pushes burger to the right side */
+}
+
+@media (max-width: 980px){
+  .burger {
+    margin-left: 20px;
+  }
+}
+
+.nav-cta{
+  display:none;
 }
 
 .brand-logo{
@@ -515,3 +530,192 @@ footer{
   }
   .btn:hover{ transform:none; }
 }
+
+/* ==================== FORM STYLING FIX ==================== */
+form {
+  max-width: 500px;
+}
+
+form .field {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+/* Form inputs with proper border and padding */
+form input, form textarea, form select {
+  width: 100%;
+  padding: 14px 16px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+form input::placeholder, form textarea::placeholder {
+  color: var(--muted-2);
+}
+
+form input:focus, form textarea:focus, form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(24, 224, 208, 0.15);
+}
+
+/* Send button styling */
+form .btn {
+  width: 100%;
+  justify-content: center;
+  font-size: 16px;
+  padding: 14px;
+}
+
+form .btn-primary {
+  background: linear-gradient(180deg, rgba(24, 224, 208, 0.2), rgba(24, 224, 208, 0.05));
+  border-color: var(--accent);
+}
+
+form .btn-primary:hover {
+  background: linear-gradient(180deg, rgba(24, 224, 208, 0.3), rgba(24, 224, 208, 0.1));
+}
+
+/* Form note styling */
+form .note {
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted-2);
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 3px solid var(--border-2);
+}
+
+/* Direct contact card */
+.direct-contact .mini-item {
+  margin-bottom: 14px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.direct-contact .mini-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Contact email link */
+.email-link {
+  color: var(--text);
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.email-link:hover {
+  color: var(--accent);
+}
+
+/* Email copy button in direct contact */
+.direct-contact .btn {
+  min-height: auto;
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+/* Contact section spacing */
+#contact {
+  padding-bottom: 24px;
+}
+/* ==================== SELECT/DROPDOWN FIX ==================== */
+
+/* Fix all select elements - most specific selector */
+form select,
+select {
+  appearance: none;
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='%23A0A5B0'%3E%3Cpath d='M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  border: 1px solid var(--border) !important;
+  border-radius: 12px !important;
+  color: var(--text) !important;
+  font-size: 15px;
+  padding: 14px 16px;
+  line-height: 1.4;
+  min-height: 48px;
+  transition: all 0.2s ease;
+}
+
+/* Fix select on dark backgrounds specifically */
+form select {
+  background-color: rgba(11, 18, 32, 0.7) !important;
+  color: var(--text) !important;
+}
+
+/* Dropdown option styling */
+select option {
+  background-color: #0E1A2B !important; /* Dark panel color from CSS vars */
+  color: var(--text) !important;
+  padding: 8px 12px !important;
+  font-size: 15px;
+}
+
+/* Dropdown option hover */
+select option:hover {
+  background-color: rgba(24, 224, 208, 0.1) !important; /* Accent color transparent */
+}
+
+/* Select focus state */
+form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(24, 224, 208, 0.15) !important;
+}
+
+/* Fix Chrome/WebKit-specific select appearance */
+select::-ms-expand {
+  display: none;
+}
+
+/* Custom arrow styling - works on most browsers */
+.form-select-wrapper::after {
+  content: " ▼";
+  font-size: 12px;
+  color: var(--muted);
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Firefox-specific fix */
+select:-moz-placeholder {
+  opacity: 1 !important;
+  color: var(--muted-2) !important;
+}
+
+select::-webkit-input-placeholder {
+  color: var(--muted-2) !important;
+  opacity: 0.8;
+}
+
+select::-moz-placeholder {
+  color: var(--muted-2) !important;
+  opacity: 0.8;
+}
+
+/* Ensure placeholder is visible on dark backgrounds */
+form select::placeholder,
+form textarea::placeholder {
+  color: var(--muted-2) !important;
+}
+
